@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.masudinn.wsamikom.Model.movie
 import com.masudinn.wsamikom.R
-import com.masudinn.wsamikom.network.api
+import com.masudinn.wsamikom.network.API
 import kotlinx.android.synthetic.main.item_movie.view.*
 
 class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
@@ -20,8 +20,8 @@ class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
             itemView.overview.text = movie.overview
             itemView.tanggal.text = movie.release_date
 
-            val imageUrl = api.IMAGE+movie.poster_Path
-            Glide.with(itemView).load(imageUrl).centerCrop().into(itemView.imgitem)
+            val imageUrl = API.IMAGE+movie.poster_Path
+            Glide.with(itemView).load(imageUrl).centerCrop().into(itemView.imaagitem)
 
             itemView.setOnClickListener{
 

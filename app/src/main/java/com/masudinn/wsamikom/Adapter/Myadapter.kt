@@ -24,7 +24,7 @@ class Myadapter (private val callback:(Mahasiswa) -> Unit):BaseAdapter(){
         v.nama.text = listMhs[position].nama
         v.nim.text = listMhs[position].nim
         v.kelas.text = listMhs[position].kelas
-        Glide.with(v).load(listMhs[position].img).into(v.imgitem)
+        Glide.with(v).load(listMhs[position].img).into(v.imageitem)
         v.setOnClickListener{(callback(listMhs[position]))}
         return v
     }
