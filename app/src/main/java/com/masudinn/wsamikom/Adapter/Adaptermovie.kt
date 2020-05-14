@@ -21,6 +21,7 @@ class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
             itemView.tanggal.text = movie.release_date
 
             val imageUrl = API.IMAGE+movie.poster_Path
+            //stack in here
             Glide.with(itemView).load(imageUrl).centerCrop().into(itemView.imaagitem)
 
             itemView.setOnClickListener{
