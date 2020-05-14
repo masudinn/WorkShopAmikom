@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageitem"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="judul : "
+        android:layout_toEndOf="@id/imgitem"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/nim"
+        android:layout_below="@id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tanggal : "
+        android:layout_toEndOf="@id/imgitem"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/kelas"
+        android:maxLines="2"
+        android:layout_below="@id/nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="overview : "
+        android:layout_toEndOf="@id/imageitem"
+        android:textSize="20sp"/>
+</RelativeLayout>
