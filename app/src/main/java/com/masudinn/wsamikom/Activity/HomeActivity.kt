@@ -23,7 +23,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var adaptermovie: Adaptermovie
-//    private lateinit var Adapter:Myadapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

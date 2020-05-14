@@ -30,7 +30,7 @@ class Myadapter (private val callback:(Mahasiswa) -> Unit):BaseAdapter(){
     }
 
     override fun getItem(position: Int): Any {
-        return listMhs
+        return listMhs[position]
     }
 
     override fun getItemId(position: Int): Long {

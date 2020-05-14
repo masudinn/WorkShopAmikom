@@ -1,7 +1,8 @@
 package com.masudinn.wsamikom.Adapter
 
-import android.graphics.Movie
+
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -12,7 +13,8 @@ import kotlinx.android.synthetic.main.item_movie.view.*
 
 class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
     private val listMovie = mutableListOf<movie>()
-    class ViewHolder (itemView:ViewGroup) :RecyclerView.ViewHolder(itemView) {
+
+    class ViewHolder (itemView: View) :RecyclerView.ViewHolder(itemView) {
         fun bind(movie: movie){
             itemView.judul.text = movie.tittle
             itemView.overview.text = movie.overview
@@ -26,11 +28,8 @@ class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
             }
         }
     }
-
-    private val lisMovie= mutableListOf<movie>()
-
     fun addData(data : List<movie>){
-        lisMovie.addAll(data)
+        listMovie.addAll(data)
         notifyDataSetChanged()
     }
 
@@ -38,9 +37,9 @@ class Adaptermovie: RecyclerView.Adapter<Adaptermovie.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(LayoutInflater.from(parent!!.context).inflate(R.layout.item_movie,parent,false) as ViewGroup)
 
-    override fun getItemCount(): Int =lisMovie.size
+    override fun getItemCount(): Int =listMovie.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(lisMovie[position])
+        holder.bind(listMovie[position])
     }
 }
